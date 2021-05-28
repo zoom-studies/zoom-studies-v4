@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/zoom-studies-v4/static/css/main.d8ba6ee7.chunk.css",
+    "main.js": "/zoom-studies-v4/static/js/main.1cdd1477.chunk.js",
+    "main.js.map": "/zoom-studies-v4/static/js/main.1cdd1477.chunk.js.map",
+    "runtime-main.js": "/zoom-studies-v4/static/js/runtime-main.de60c917.js",
+    "runtime-main.js.map": "/zoom-studies-v4/static/js/runtime-main.de60c917.js.map",
+    "static/css/2.3cf5d70f.chunk.css": "/zoom-studies-v4/static/css/2.3cf5d70f.chunk.css",
+    "static/js/2.40eea89e.chunk.js": "/zoom-studies-v4/static/js/2.40eea89e.chunk.js",
+    "static/js/2.40eea89e.chunk.js.map": "/zoom-studies-v4/static/js/2.40eea89e.chunk.js.map",
+    "index.html": "/zoom-studies-v4/index.html",
+    "precache-manifest.bd6786eb504d942e722371f04b447083.js": "/zoom-studies-v4/precache-manifest.bd6786eb504d942e722371f04b447083.js",
+    "service-worker.js": "/zoom-studies-v4/service-worker.js",
+    "static/css/2.3cf5d70f.chunk.css.map": "/zoom-studies-v4/static/css/2.3cf5d70f.chunk.css.map",
+    "static/css/main.d8ba6ee7.chunk.css.map": "/zoom-studies-v4/static/css/main.d8ba6ee7.chunk.css.map",
+    "static/js/2.40eea89e.chunk.js.LICENSE.txt": "/zoom-studies-v4/static/js/2.40eea89e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de60c917.js",
+    "static/css/2.3cf5d70f.chunk.css",
+    "static/js/2.40eea89e.chunk.js",
+    "static/css/main.d8ba6ee7.chunk.css",
+    "static/js/main.1cdd1477.chunk.js"
+  ]
+}
