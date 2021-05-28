@@ -1,0 +1,45 @@
+a.nav-link {
+  color: #000;
+}
+
+/* Surveys CSS */
+
+div .tlx-scale {
+  width:100%;
+  margin:0;
+  padding:0 1rem;
+  display: flex;
+}
+
+div .tlx-scale * {
+  margin: 0 1rem;
+}
+
+div .elab-row, div .sus-row {
+  width:100%;
+  margin:0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  font-size: .9rem;
+}
+
+div .elab-row *, div .sus-row * {
+  margin: 1rem;
+}
+
+/* Make only the document scroll */
+
+.text-ctn {
+  overflow-y: scroll;
+  position: relative;
+  max-height: 550px;
+}
+
+div .text-blk {
+  padding: 0.2rem;
+}
+
+ul {
+  list-style-type: none;
+  text-align: left;
+}
