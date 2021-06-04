@@ -239,6 +239,7 @@ class App extends Component {
             tlxComplete={tlxComplete}
             elabComplete={elabComplete}
             susComplete={susComplete}
+            numQuestionsCompleted={numQuestionsCompleted}
           />
         </Modal>
         <Modal

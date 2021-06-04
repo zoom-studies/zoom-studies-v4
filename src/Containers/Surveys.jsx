@@ -4,10 +4,6 @@ import './containers.css';
 
 class Surveys extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  // }
-
   tlxSubmit = (e) => {
     e.preventDefault();
 
@@ -43,21 +39,29 @@ class Surveys extends Component {
 
   susSubmit = (e) => {
     e.preventDefault();
+    const { numQuestionsCompleted } = this.props;
 
     const susValues = {
-      'sus1': e.target.e_q1.value,
-      'sus2': e.target.e_q2.value,
-      'sus3': e.target.e_q3.value,
-      'sus4': e.target.e_q4.value,
-      'sus5': e.target.e_q5.value,
-      'sus6': e.target.e_q6.value,
-      'sus7': e.target.e_q7.value,
-      'sus8': e.target.e_q8.value,
-      'sus9': e.target.e_q9.value,
-      'sus10': e.target.e_q9.value
+      'sus1': e.target.s_q1.value,
+      'sus2': e.target.s_q2.value,
+      'sus3': e.target.s_q3.value,
+      'sus4': e.target.s_q4.value,
+      'sus5': e.target.s_q5.value,
+      'sus6': e.target.s_q6.value,
+      'sus7': e.target.s_q7.value,
+      'sus8': e.target.s_q8.value,
+      'sus9': e.target.s_q9.value,
+      'sus10': e.target.s_q10.value
     }
 
-    this.props.onSusSubmit(susValues);
+    if (numQuestionsCompleted === 27) {
+      const prefValue = {
+        'pref': e.target.pref.value
+      }
+      this.props.onSusSubmit({...susValues,...prefValue});
+    } else {
+      this.props.onSusSubmit(susValues);
+    }
   }
 
   tlxScales() {
@@ -223,65 +227,75 @@ class Surveys extends Component {
       <hr />
       <Form className="sus-div" onSubmit={this.susSubmit}>
         <Label>I think that I would like to use this system frequently.</Label>
-        <div className="sus-row" id="e_q1">
-          Strongly disagree	
-          <Input type="range" id="e_q1" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q1">
+          Strongly disagree
+          <Input type="range" id="s_q1" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I found the system unnecessarily complex.</Label>
-        <div className="sus-row" id="e_q2">
-          Strongly disagree	
-          <Input type="range" id="e_q2" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q2">
+          Strongly disagree
+          <Input type="range" id="s_q2" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I thought the system was easy to use.</Label>
-        <div className="sus-row" id="e_q3">
-          Strongly disagree	
-          <Input type="range" id="e_q3" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q3">
+          Strongly disagree
+          <Input type="range" id="s_q3" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I think that I would need the support of a technical person to be able to use this system.</Label>
-        <div className="sus-row" id="e_q4">
-          Strongly disagree	
-          <Input type="range" id="e_q4" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q4">
+          Strongly disagree
+          <Input type="range" id="s_q4" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I found the various functions in this system were well integrated.</Label>
-        <div className="sus-row" id="e_q5">
-          Strongly disagree	
-          <Input type="range" id="e_q5" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q5">
+          Strongly disagree
+          <Input type="range" id="s_q5" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I thought there was too much inconsistency in this system.</Label>
-        <div className="sus-row" id="e_q6">
-          Strongly disagree	
-          <Input type="range" id="e_q6" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q6">
+          Strongly disagree
+          <Input type="range" id="s_q6" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I would imagine that most people would learn to use this system very quickly.</Label>
-        <div className="sus-row" id="e_q7">
-          Strongly disagree	
-          <Input type="range" id="e_q7" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q7">
+          Strongly disagree
+          <Input type="range" id="s_q7" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I found the system very cumbersome to use.</Label>
-        <div className="sus-row" id="e_q8">
-          Strongly disagree	
-          <Input type="range" id="e_q8" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q8">
+          Strongly disagree
+          <Input type="range" id="s_q8" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I felt very confident using the system.</Label>
-        <div className="sus-row" id="e_q9">
-          Strongly disagree	
-          <Input type="range" id="e_q9" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q9">
+          Strongly disagree
+          <Input type="range" id="s_q9" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
         <Label>I needed to learn a lot of things before I could get going with this system.</Label>
-        <div className="sus-row" id="e_q10">
-          Strongly disagree	
-          <Input type="range" id="e_q10" defaultValue="3" min="1" max="5" />
+        <div className="sus-row" id="s_q10">
+          Strongly disagree
+          <Input type="range" id="s_q10" defaultValue="3" min="1" max="5" />
           Strongly agree
         </div>
+        { this.props.numQuestionsCompleted === 27 &&
+          (
+            <span><Label>I thought I performed better: </Label>
+            <div className="sus-row" id="pref">
+              Without the Codebook
+              <Input type="range" id="pref" defaultValue="11" min="1" max="21" />
+              With the Codebook
+            </div></span>
+          )
+        }
         <Button type="submit">Submit</Button>
       </Form>
       </Container>
@@ -319,15 +333,5 @@ class Surveys extends Component {
     );
   }
 }
-
-// function TLXscale(props) {
-//   return (
-//     <div className="tlx-scale">
-//       {props.id==='performance' ? 'Good' : 'Low'}
-//       <Input type="range" ref={props.ref} name={props.id} defaultValue="11" min="1" max="21" />
-//       {props.id==='performance' ? 'Bad' : 'High'}
-//     </div>
-//   );
-// }
 
 export default Surveys;
