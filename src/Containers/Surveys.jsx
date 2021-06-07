@@ -55,10 +55,11 @@ class Surveys extends Component {
     }
 
     if (numQuestionsCompleted === 27) {
-      const prefValue = {
-        'pref': e.target.pref.value
+      const otherValues = {
+        'pref': e.target.pref.value,
+        'comment': e.target.comment.value
       }
-      this.props.onSusSubmit({...susValues,...prefValue});
+      this.props.onSusSubmit({...susValues,...otherValues});
     } else {
       this.props.onSusSubmit(susValues);
     }
@@ -288,12 +289,16 @@ class Surveys extends Component {
         </div>
         { this.props.numQuestionsCompleted === 27 &&
           (
-            <span><Label>I thought I performed better: </Label>
-            <div className="sus-row" id="pref">
-              Without the Codebook
-              <Input type="range" id="pref" defaultValue="11" min="1" max="21" />
-              With the Codebook
-            </div></span>
+            <>
+              <span><Label>I thought I rated more accurately: </Label>
+              <div className="sus-row" id="pref">
+                Without the Codebook
+                <Input type="range" id="pref" defaultValue="11" min="1" max="21" />
+                With the Codebook
+              </div></span>
+              <Label>Do you have any comment? </Label>
+              <Input type="textarea" id="comment" className="mb-3"/>
+            </>
           )
         }
         <Button type="submit">Submit</Button>
